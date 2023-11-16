@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://d03ysy4g8jto4"]
+
+[ext_resource type="Texture2D" uid="uid://7xtvti556ec5" path="res://icon.svg" id="1_6w04r"]
+[ext_resource type="Shader" path="res://test_mobile.gdshader" id="2_1l56i"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_80b22"]
+resource_local_to_scene = true
+shader = ExtResource("2_1l56i")
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_fxd7a"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(188.5, 152)
+scale = Vector2(2.33594, 1.79688)
+texture = ExtResource("1_6w04r")
+
+[node name="BackBufferCopy" type="BackBufferCopy" parent="."]
+rect = Rect2(0, 0, 576, 324)
+
+[node name="Image 0" type="Polygon2D" parent="."]
+material = SubResource("ShaderMaterial_80b22")
+position = Vector2(107, 115)
+scale = Vector2(5.05981, 4.92809)
+texture = SubResource("PlaceholderTexture2D_fxd7a")
+polygon = PackedVector2Array(-32, -13.44, -32, 13.44, -13.44, 32, 13.44, 32, 32, 13.44, 32, -13.44, 13.44, -32, -13.44, -32)
+uv = PackedVector2Array(0, 18.56, 0, 45.44, 18.56, 64, 45.44, 64, 64, 45.44, 64, 18.56, 45.44, 0, 18.56, 0)
